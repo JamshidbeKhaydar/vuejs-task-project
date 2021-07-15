@@ -10,7 +10,34 @@
 import Header from "./components/Header";
 export default {
   name: 'App',
-  components: {Header}
+  components: {Header},
+  data() {
+    return {
+      tasks: []
+    }
+  },
+  created() {
+    this.tasks = [
+      {
+        id: 1,
+        text: 'Liverpool was created',
+        day: 'march 1st march 1998 10:25pm',
+        reminder: true
+      },
+      {
+        id: 1,
+        text: 'Barcelona was created',
+        day: 'april 21st april 1999 5:25pm',
+        reminder: true
+      },
+      {
+        id: 1,
+        text: 'Chelsea was created',
+        day: 'may 11st may 1988 3:25pm',
+        reminder: true
+      }
+    ]
+  }
 }
 </script>
 
