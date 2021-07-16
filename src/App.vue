@@ -20,7 +20,9 @@ export default {
   },
   methods: {
     deleteTask(id) {
-
+      if (confirm('Вы согласны удалить')) {
+        this.tasks = this.tasks.filter((task) => task.id !== id)
+      }
     }
   },
   created() {
