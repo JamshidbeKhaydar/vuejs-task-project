@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <Header title="Track"/>
+    <Tasks @delete-task="deleteTask" :tasks="tasks" />
   </div>
 </template>
 
@@ -8,12 +9,18 @@
 
 
 import Header from "./components/Header";
+import Tasks from "./components/Tasks";
 export default {
   name: 'App',
-  components: {Header},
+  components: {Tasks, Header},
   data() {
     return {
       tasks: []
+    }
+  },
+  methods: {
+    deleteTask(id) {
+
     }
   },
   created() {
@@ -25,13 +32,13 @@ export default {
         reminder: true
       },
       {
-        id: 1,
+        id: 2,
         text: 'Barcelona was created',
         day: 'april 21st april 1999 5:25pm',
         reminder: true
       },
       {
-        id: 1,
+        id: 3,
         text: 'Chelsea was created',
         day: 'may 11st may 1988 3:25pm',
         reminder: true
